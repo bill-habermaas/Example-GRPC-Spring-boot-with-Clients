@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "helloworld";
+option go_package = "/helloworld";
+
+package helloworld;
+
+//service GreetingService {
+service GreetingService {
+  rpc SayHello (RequestMessage) returns (ResponseMessage) {}
+}
+
+message RequestMessage {
+  string name = 1;
+}
+
+message ResponseMessage {
+  bool success = 1;
+  string message = 2;
+}
