@@ -1,3 +1,6 @@
+gradle build run&
+sleep 3
+
 echo -e "\nRunning the GO client..."
 cd src/main/golang
 go run client.go
